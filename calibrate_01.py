@@ -37,11 +37,14 @@ for fname in images:
 
 cv2.destroyAllWindows()
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1],None,None)
+print("camera matrix:")
+print(mtx)
+print("distortion coff:")
+print(dist)
 # the mtx is the intrinsics and the dist is the distortion coefficients.
 
 h,  w = gray.shape[:2]
 newcameramtx, roi=cv2.getOptimalNewCameraMatrix(mtx,dist,(w,h),1,(w,h))
-
 # undistort
 mapx,mapy = cv2.initUndistortRectifyMap(mtx,dist,None,newcameramtx,(w,h),5)
 for fname in images:
