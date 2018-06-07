@@ -145,3 +145,5 @@ CTestTestfile.cmake
 *.exe
 *.out
 *.app
+# executable
+stereo_calib_rectify
