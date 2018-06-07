@@ -3,5 +3,5 @@ project(opencv_learning)
 
 set(CMAKE_CXX_STANDARD 11)
 find_package( OpenCV REQUIRED )
-add_executable(simple_learning main.cpp)
-target_link_libraries( simple_learning ${OpenCV_LIBS} )
+add_executable(stereo_calib_rectify main.cpp)
+target_link_libraries(stereo_calib_rectify  ${OpenCV_LIBS} )
