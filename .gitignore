@@ -147,3 +147,5 @@ CTestTestfile.cmake
 *.app
 # executable
 stereo_calib_rectify
+# cmakefile
+CMakeLists.txt
